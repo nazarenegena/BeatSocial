@@ -1,19 +1,17 @@
 import SocialsSection from "./SocialsSection"
 import TrackLineUpSection from "./TrackLineUpSection"
+import LyricSection from "./LyricsSection"
 
 
 const MusicPage = () => {
     return (
         <div>
-         <LyricSection>
-          {children}
-        </LyricSection>
-        <SocialsSection>
-          {children}
-        </SocialsSection>
-        <TrackLineUpSection>
-          {children}
-        </TrackLineUpSection>
+         <LyricSection/>
+         
+        <SocialsSection/>
+         
+        <TrackLineUpSection/>
+         
         </div>
     )
 }
