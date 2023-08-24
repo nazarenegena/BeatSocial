@@ -1,11 +1,12 @@
-import LandingPage from "@/components/LandingPage";
 
 export default function Home() {
   return (
-    <>
-          <LandingPage/>
+    <div
+    >
+     <p>the landing page content</p>
+      
 
-      </>
+      </div>
       
   
   )
