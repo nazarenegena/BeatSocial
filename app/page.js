@@ -1,10 +1,19 @@
 
 export default function Home() {
   return (
-    <div className="px-10
-       py-5
-       bg-gradient-to-t from-white to-rose-100 ">
-     <p>the landing page content</p>
+    <div className=" h-full
+    w-full
+    overflow-hidden
+    overflow-y-auto">
+      <div className="flex justify-end">
+<p>the landing page content</p>
+      
+                    <div className="flex ">
+ <button>Sign In</button>   
+                 <button>Sign Up</button>   
+                    </div>
+         
+      </div>
       
 
       </div>

@@ -13,14 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className}`}>
-        <div className="flex justify-between py-6">
-          <p>BeatSocial logo</p>
-          <Navbar />
-         
-        </div>
+      <body className={font.className}>
         
-{children}
+        <Navbar>
+          {children}
+          </Navbar>
+         
+        
+
       </body>
     </html>
   )
