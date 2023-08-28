@@ -1,8 +1,8 @@
-const SignUp = () => {
+const SignUp = ({className}) => {
     return (
-        <p className="px-4">
+        <button className={className}>
             Sign Up
-        </p>
+        </button>
     )
 }
 

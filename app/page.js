@@ -1,21 +1,18 @@
+import Header from "@/components/Header";
 
-export default function Home() {
+export default function Home({children}) {
   return (
-    <div className=" h-full
+    <div className="
+    
+    rounded-lg
+    h-full
     w-full
     overflow-hidden
-    overflow-y-auto">
-      <div className="flex justify-end">
-<p>the landing page content</p>
-      
-                    <div className="flex ">
- <button>Sign In</button>   
-                 <button>Sign Up</button>   
-                    </div>
-         
-      </div>
-      
-
+    overflow-y-auto
+    ">
+      <Header>
+        {children}
+     </Header>
       </div>
       
   

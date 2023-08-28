@@ -1,12 +1,11 @@
 "use client";
+import Link from 'next/link'
 import { TbPlaylist } from "react-icons/tb";
 import { BsMusicNote } from "react-icons/bs";
 import { IoMdAlbums, IoMdMicrophone } from "react-icons/io";
 
 const Library = () => {
-  const onClick = () => {
-    // handle upload later
-  };
+  
   return (
     <div className="flex flex-col">
       <div
@@ -33,7 +32,8 @@ const Library = () => {
 
           <div>
             <ul>
-              <div className="flex
+              {/* playlist */}
+              <Link className="flex
               items-center
                my-6
                  pl-2
@@ -43,11 +43,15 @@ const Library = () => {
               hover:text-white
               transition
               hover:rounded-md
-            ">
+            "
+                href="/playlist"
+              >
                 <TbPlaylist className="mr-4" size={16} strokeWidth={3} />
                 <li >Playlist</li>
-              </div>
-              <div className="flex
+              </Link>
+
+              {/* songs */}
+              <Link className="flex
               items-center
                my-6
                  pl-2
@@ -57,11 +61,15 @@ const Library = () => {
               hover:text-white
               transition
               hover:rounded-md
-            ">
+            "
+                href="/songs"
+              >
                 <BsMusicNote className="mr-4" size={16} />
                 <li>Songs</li>
-              </div>
-              <div className="flex
+              </Link>
+
+              {/* the artist page */}
+              <Link className="flex
               items-center
                my-6
                  pl-2
@@ -71,11 +79,15 @@ const Library = () => {
               hover:text-white
               transition
               hover:rounded-md
-            ">
+            "
+              href="/artist"
+              >
                 <IoMdMicrophone className="mr-4" size={16} />
-                <li>Artist</li>
-              </div>
-              <div className="flex
+                <li>Artists</li>
+              </Link>
+
+              {/* albums */}
+              <Link className="flex
               items-center
                my-6
                  pl-2
@@ -85,10 +97,12 @@ const Library = () => {
               hover:text-white
               transition
               hover:rounded-md
-            ">
+            "
+              href="albums"
+              >
                 <IoMdAlbums className="mr-4" size={16} />
                 <li>Albums</li>
-              </div>
+              </Link>
             </ul>
           </div>
         </div>
@@ -106,7 +120,8 @@ const Library = () => {
           </p>
           <div>
             <ul>
-              <div
+              {/* recently added */}
+              <Link
                 className="
               flex
               items-center
@@ -118,15 +133,14 @@ const Library = () => {
               hover:text-white
               transition
               hover:rounded-md
-            
-             
-
               "
+                href="/recently-added"
               >
                 <TbPlaylist className="mr-4" size={16} strokeWidth={3} />
                 <li>Recently Added</li>
-              </div>
-              <div
+              </Link>
+              {/* recently played */}
+              <Link
                 className="
               flex
               items-center
@@ -139,12 +153,13 @@ const Library = () => {
               transition
               hover:rounded-md
               "
+                href="/recently-played"
               >
                 <TbPlaylist className="mr-4" size={16} strokeWidth={3} />
                 <li>Recently Played</li>
-              </div>
-
-              <div
+              </Link>
+{/* top artist */}
+              <Link
                 className="
               flex
               items-center
@@ -157,11 +172,14 @@ const Library = () => {
               transition
               hover:rounded-md
               "
+                href="/top-artist"
               >
                 <IoMdMicrophone className="mr-4" size={16} />
                 <li>Top Artists</li>
-              </div>
-              <div
+              </Link>
+
+              {/* top albums */}
+              <Link
                 className="
                 flex
                 items-center
@@ -174,10 +192,11 @@ const Library = () => {
               transition
               hover:rounded-md
                 "
+                href="/top-album"
               >
                 <IoMdAlbums className="mr-4" size={16} />
                 <li>Top Albums</li>
-              </div>
+              </Link>
             </ul>
           </div>
         </div>
