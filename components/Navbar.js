@@ -2,6 +2,7 @@
 
 import Box from "./Box";
 import Library from "./Library";
+import Link from 'next/link'
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { TbBrandBeats } from "react-icons/tb";
@@ -22,12 +23,12 @@ const Navbar = ({ children }) => {
             p-2
             bg-white"
       >
-        <Box className="py-10 px-5">
+        <Box className="py-5 px-5">
           <div className="flex items-center text-dark-pink font-bold cursor-pointer">
             <TbBrandBeats size={50} strokeWidth={2} />
             <p>eatsocial</p>
           </div>
-          <div className="flex
+          <Link className="flex
               items-center
                my-6
                  pl-2
@@ -37,10 +38,13 @@ const Navbar = ({ children }) => {
               hover:text-white
               transition
               hover:rounded-md
-            ">
+            "
+          href="/"
+          >
+
             <HiHome className="mr-4 " size={16} />
             <p>Home</p>
-          </div>
+          </Link>
 
           <div className="
           flex
@@ -64,7 +68,9 @@ const Navbar = ({ children }) => {
           <Library />
         </Box>
       </div>
-      <main>{children}</main>
+      <main className="h-full flex-1 overflow-y-auto py-2">
+        {children}
+      </main>
       {/* bg-gradient-to-t from-white to-rose-100 justify-between */}
     </div>
   );

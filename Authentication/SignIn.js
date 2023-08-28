@@ -1,8 +1,8 @@
-const SignIn = () => {
+const SignIn = ({className}) => {
     return (
-        <p className="px-8 text-red-500">
+        <button className={className}>
             Sign in
-        </p>
+        </button>
     )
 }
 
