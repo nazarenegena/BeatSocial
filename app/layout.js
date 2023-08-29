@@ -1,7 +1,6 @@
+import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Figtree } from 'next/font/google'
-import Navbar from '@/components/Navbar'
-
 
 const font = Figtree({ subsets: ['latin'] })
 

@@ -1,6 +1,7 @@
-import Header from "@/components/Header";
+import Header from "@/sections/Header";
+import Content from "@/components/Content";
 
-export default function Home({children}) {
+export default function Home() {
   return (
     <div className="
     
@@ -9,10 +10,14 @@ export default function Home({children}) {
     w-full
     overflow-hidden
     overflow-y-auto
+    
+    
+        px-4
     ">
-      <Header>
-        {children}
-     </Header>
+      <Header/>
+      <Content/>
+        
+     
       </div>
       
   

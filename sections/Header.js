@@ -14,16 +14,18 @@ const Header = () => {
     return (
         <div className="
         h-fit
-        p-6
+        my-6
         mr-12
         flex
         justify-between
+       
+       
         ">
             <div>
 <p className="text-4xl font-semibold mb-5">
                 Welcome Back
                 </p>
-                <p className="text-xl font-medium">Top picks for you</p>
+                <p className="text-xl font-medium text-secondary-orange">Top picks for you</p>
             </div>
             
             <div>
@@ -37,9 +39,9 @@ const Header = () => {
             py-2
             rounded-md
             text-bold
-            hover:bg-black
+             hover:border-secondary-orange
             hover:text-white
-            hover:border-black
+            hover:bg-secondary-orange
             transition
             font-medium
             "/>
@@ -52,9 +54,9 @@ const Header = () => {
             py-2
             text-white
             rounded-md
-            hover:border-black
-            hover:text-black
-            hover:bg-white
+            hover:border-secondary-orange
+            hover:text-white
+            hover:bg-secondary-orange
             transition
             font-medium
             "/>

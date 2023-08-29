@@ -19,7 +19,7 @@ const Library = () => {
         <div className="py-10">
           <p
             className="
-                        text-dark-pink
+                        
                         font-semibold
                         text-md
                         mb-5
@@ -37,12 +37,13 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
             "
                 href="/playlist"
               >
@@ -55,12 +56,13 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+             hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
             "
                 href="/songs"
               >
@@ -73,12 +75,14 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
+             
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
             "
               href="/artist"
               >
@@ -91,12 +95,14 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
+             
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
             "
               href="albums"
               >
@@ -110,7 +116,7 @@ const Library = () => {
         <div className="py-3">
           <p
             className="
-                        text-dark-pink
+                       
                         font-semibold
                         text-md
                         mb-5    
@@ -127,12 +133,14 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
+             
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
               "
                 href="/recently-added"
               >
@@ -146,12 +154,14 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
+             
               cursor-pointer
-              hover:bg-dark-pink
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
               "
                 href="/recently-played"
               >
@@ -165,12 +175,14 @@ const Library = () => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
+              
               cursor-pointer
-              hover:bg-dark-pink
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
               "
                 href="/top-artist"
               >
@@ -185,12 +197,14 @@ const Library = () => {
                 items-center
                  my-6
                  pl-2
-              text-dark-pink
+              
               cursor-pointer
-              hover:bg-dark-pink
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
               hover:rounded-md
+                            hover:font-medium
+
                 "
                 href="/top-album"
               >
