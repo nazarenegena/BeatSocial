@@ -1,9 +1,11 @@
+import SearchModal from "@/components/SearchModal";
 import Header from "@/sections/Header";
-import Content from "@/components/Content";
+import HomeContent from "@/sections/HomeContent";
 
 export default function Home() {
   return (
-    <div className="
+    <div
+      className="
     
     rounded-lg
     h-full
@@ -13,13 +15,11 @@ export default function Home() {
     
     
         px-4
-    ">
-      <Header/>
-      <Content/>
-        
-     
-      </div>
-      
-  
-  )
+    "
+    >
+      {/* <SearchModal /> */}
+      <Header />
+      <HomeContent />
+    </div>
+  );
 }

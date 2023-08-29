@@ -1,7 +1,10 @@
+import Content from "@/sections/Content";
+
 export default function Page() {
-    return (
-        <>
-            <p>My playlist page</p>
-        </>
-    )
+  console.log("yey");
+  return (
+    <>
+      <Content />
+    </>
+  );
 }
