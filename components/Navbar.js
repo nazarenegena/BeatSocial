@@ -24,7 +24,7 @@ const Navbar = ({ children }) => {
             bg-white"
       >
         <Box className="py-5 px-5">
-          <div className="flex items-center text-dark-pink font-bold cursor-pointer">
+          <div className="flex items-center text-secondary-orange font-semibold cursor-pointer">
             <TbBrandBeats size={50} strokeWidth={2} />
             <p>eatsocial</p>
           </div>
@@ -32,11 +32,11 @@ const Navbar = ({ children }) => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
               transition
+              hover:font-medium
               hover:rounded-md
             "
           href="/"
@@ -51,12 +51,14 @@ const Navbar = ({ children }) => {
               items-center
                my-6
                  pl-2
-              text-dark-pink
               cursor-pointer
-              hover:bg-dark-pink 
-              hover:text-white
+              hover:shadow-md
+              hover:text-secondary-orange
+              hover:
               transition
               hover:rounded-md
+                            hover:font-medium
+
             
           ">
             <BiSearch className="mr-4" size={16} strokeWidth={2} />
@@ -64,7 +66,7 @@ const Navbar = ({ children }) => {
           </div>
         </Box>
 
-        <Box className="overflow-y-auto h-full">
+        <Box className="overflow-y-auto h-full shadow-md">
           <Library />
         </Box>
       </div>

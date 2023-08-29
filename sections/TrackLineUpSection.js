@@ -1,5 +1,5 @@
 import PlayTrackSection from "./PlayTrackSection"
-import Track from "./Track"
+import Track from "../components/Track"
 
 const TrackLineUpSection = () => {
     return (

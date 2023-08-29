@@ -3,7 +3,7 @@ const Box = ({ children, className }) => {
     <div
       className={`${className} rounded-lg
             w-full
-            bg-primary-pink`}
+            shadow-md`}
     >
       {children}
     </div>
