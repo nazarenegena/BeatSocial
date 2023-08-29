@@ -1,18 +1,17 @@
-
-import SignIn from "@/Authentication/SignIn"
-import SignUp from "@/Authentication/SignUp"
+import SignIn from "@/Authentication/SignIn";
+import SignUp from "@/Authentication/SignUp";
 
 const Header = () => {
+  const handleSignIn = () => {
+    // handle sign in
+  };
 
-    const handleSignIn = () => {
-        // handle sign in
-    }
-
-      const handleSignOut = () => {
-        // handle sign out
-    }
-    return (
-        <div className="
+  const handleSignOut = () => {
+    // handle sign out
+  };
+  return (
+    <div
+      className="
         h-fit
         my-6
         mr-12
@@ -20,16 +19,15 @@ const Header = () => {
         justify-between
        
        
-        ">
-            <div>
-<p className="text-4xl font-semibold mb-5">
-                Welcome Back
-                </p>
-                <p className="text-xl font-medium text-secondary-orange">Top picks for you</p>
-            </div>
-            
-            <div>
- <SignUp className="
+        "
+    >
+      <div>
+        <p className="text-4xl font-semibold mb-5">Welcome Back</p>
+      </div>
+
+      <div>
+        <SignUp
+          className="
             mr-8
             px-8
             w-36
@@ -44,8 +42,10 @@ const Header = () => {
             hover:bg-secondary-orange
             transition
             font-medium
-            "/>
-            <SignIn className="
+            "
+        />
+        <SignIn
+          className="
             px-8
             w-36
             border-2
@@ -59,13 +59,11 @@ const Header = () => {
             hover:bg-secondary-orange
             transition
             font-medium
-            "/>
-           
-            </div>
-           
-            
-        </div>
-    )
-}
+            "
+        />
+      </div>
+    </div>
+  );
+};
 
-export default Header
+export default Header;

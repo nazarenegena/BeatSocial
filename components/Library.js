@@ -1,11 +1,10 @@
 "use client";
-import Link from 'next/link'
+import Link from "next/link";
 import { TbPlaylist } from "react-icons/tb";
 import { BsMusicNote } from "react-icons/bs";
 import { IoMdAlbums, IoMdMicrophone } from "react-icons/io";
 
 const Library = () => {
-  
   return (
     <div className="flex flex-col">
       <div
@@ -33,7 +32,8 @@ const Library = () => {
           <div>
             <ul>
               {/* playlist */}
-              <Link className="flex
+              <Link
+                className="flex
               items-center
                my-6
                  pl-2
@@ -48,11 +48,12 @@ const Library = () => {
                 href="/playlist"
               >
                 <TbPlaylist className="mr-4" size={16} strokeWidth={3} />
-                <li >Playlist</li>
+                <li>Playlist</li>
               </Link>
 
               {/* songs */}
-              <Link className="flex
+              <Link
+                className="flex
               items-center
                my-6
                  pl-2
@@ -71,7 +72,8 @@ const Library = () => {
               </Link>
 
               {/* the artist page */}
-              <Link className="flex
+              <Link
+                className="flex
               items-center
                my-6
                  pl-2
@@ -84,14 +86,15 @@ const Library = () => {
                             hover:font-medium
 
             "
-              href="/artist"
+                href="/artist"
               >
                 <IoMdMicrophone className="mr-4" size={16} />
                 <li>Artists</li>
               </Link>
 
               {/* albums */}
-              <Link className="flex
+              <Link
+                className="flex
               items-center
                my-6
                  pl-2
@@ -104,7 +107,7 @@ const Library = () => {
                             hover:font-medium
 
             "
-              href="albums"
+                href="albums"
               >
                 <IoMdAlbums className="mr-4" size={16} />
                 <li>Albums</li>
@@ -168,7 +171,7 @@ const Library = () => {
                 <TbPlaylist className="mr-4" size={16} strokeWidth={3} />
                 <li>Recently Played</li>
               </Link>
-{/* top artist */}
+              {/* top artist */}
               <Link
                 className="
               flex

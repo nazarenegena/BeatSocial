@@ -1,15 +1,13 @@
 import Image from "next/image";
 import { BiPlayCircle } from "react-icons/bi";
-const Card = ({ title, artist, imgSrc }) => {
+const MiniCard = ({ title, artist, imgSrc }) => {
   return (
     <div
       className="
-      
         cursor-pointer
         flex
         flex-col
         mb-6
-        pt-2
         shadow-md
         items-center
         justify-center
@@ -18,7 +16,6 @@ const Card = ({ title, artist, imgSrc }) => {
         hover:opacity-90  
             hover:text-secondary-orange
             hover:font-medium
-        
             hover:scale-115
         
         "
@@ -32,11 +29,9 @@ const Card = ({ title, artist, imgSrc }) => {
             flex
             items-center
             justify-center
-            bg-red
-            p-4
             drop-shadow-md
             group-hover:opacity-100
-           
+           w-full
             "
       >
         <BiPlayCircle size={70} />
@@ -44,8 +39,8 @@ const Card = ({ title, artist, imgSrc }) => {
 
       <Image
         className=" 
-            h-72 
-            w-60
+        w-full
+            h-48
             object-cover 
             rounded-md
              items-center
@@ -65,4 +60,4 @@ const Card = ({ title, artist, imgSrc }) => {
   );
 };
 
-export default Card;
+export default MiniCard;

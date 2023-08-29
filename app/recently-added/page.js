@@ -1,10 +1,10 @@
+import Content from "@/sections/Content";
+
 export default function Page() {
     return (
         <>
-            <p>
-                The recently added page
-            </p>
-
+           
+<Content/>
         </>
     )
 }

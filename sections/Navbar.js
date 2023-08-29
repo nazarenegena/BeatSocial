@@ -1,13 +1,18 @@
 "use client";
+import React, { useState } from "react";
 
-import Box from "./Box";
-import Library from "./Library";
-import Link from 'next/link'
+import Box from "../components/Box";
+import Library from "../components/Library";
+import Link from "next/link";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { TbBrandBeats } from "react-icons/tb";
+import SearchModal from "@/components/SearchModal";
 
 const Navbar = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen, "is");
+
   return (
     <div
       className="flex h-full
@@ -28,7 +33,8 @@ const Navbar = ({ children }) => {
             <TbBrandBeats size={50} strokeWidth={2} />
             <p>eatsocial</p>
           </div>
-          <Link className="flex
+          <Link
+            className="flex
               items-center
                my-6
                  pl-2
@@ -39,14 +45,14 @@ const Navbar = ({ children }) => {
               hover:font-medium
               hover:rounded-md
             "
-          href="/"
+            href="/"
           >
-
             <HiHome className="mr-4 " size={16} />
             <p>Home</p>
           </Link>
 
-          <div className="
+          <button
+            className="
           flex
               items-center
                my-6
@@ -60,10 +66,12 @@ const Navbar = ({ children }) => {
                             hover:font-medium
 
             
-          ">
+          "
+            onClick={(isOpen) => setIsOpen(!isOpen)}
+          >
             <BiSearch className="mr-4" size={16} strokeWidth={2} />
             <p>Browse</p>
-          </div>
+          </button>
         </Box>
 
         <Box className="overflow-y-auto h-full shadow-md">
@@ -72,6 +80,7 @@ const Navbar = ({ children }) => {
       </div>
       <main className="h-full flex-1 overflow-y-auto py-2">
         {children}
+        <SearchModal openModal={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       </main>
       {/* bg-gradient-to-t from-white to-rose-100 justify-between */}
     </div>
