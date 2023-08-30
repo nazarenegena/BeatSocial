@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { BiPlayCircle } from "react-icons/bi";
 const Card = ({ title, artist, imgSrc }) => {
   return (
     <div
+      onClick={() => console.log("clicked")}
       className="
       
         cursor-pointer

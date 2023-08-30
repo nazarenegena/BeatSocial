@@ -1,6 +1,6 @@
-import LyricSection from "@/sections/LyricsSection"
-import SocialsSection from "@/sections/SocialsSection"
-import TrackLineUpSection from "@/sections/TrackLineUpSection"
+import LyricSection from "@/components/sections/LyricsSection"
+import SocialsSection from "@/components/sections/SocialsSection"
+import TrackLineUpSection from "@/components/sections/TrackLineUpSection"
 
 export default function Page() {
     return (
