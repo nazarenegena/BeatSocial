@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import PlayTrackSection from "./PlayTrackSection";
-import Track from "../Track";
 import { BiPlay } from "react-icons/bi";
 import { BiHeart } from "react-icons/bi";
 import { HiHeart } from "react-icons/hi";
