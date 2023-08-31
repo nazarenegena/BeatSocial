@@ -1,4 +1,4 @@
-import SearchModal from "@/components/SearchModal";
+import SearchModal from "@/components/Modal";
 
 export default function Page() {
   return (
