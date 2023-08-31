@@ -4,9 +4,9 @@ import Button from "../Button";
 const LyricSection = ({ lyricImg }) => {
   return (
     <div className="relative h-60 w-full rounded-lg lg:h-96 lg:max-w-full">
-      <div className="absolute z-50  flex flex-col px-12">
+      <div className="absolute z-20  flex flex-col px-12">
         <p className=" mt-10 text-2xl font-bold text-zinc-700">Artist</p>
-        <p className="mt-8 text-5xl font-bold text-black">Hollow Cloves</p>
+        <p className="mt-8 text-5xl font-bold text-white">Hollow Cloves</p>
         <div className="mt-24 flex">
           <Button
             title="Play"
@@ -33,7 +33,7 @@ const LyricSection = ({ lyricImg }) => {
         />
       </div>
 
-      <div className="relative z-10 h-full  justify-center rounded-lg bg-secondary-orange opacity-30"></div>
+      <div className="relative z-10 h-full  justify-center rounded-lg bg-secondary-orange opacity-40 "></div>
     </div>
   );
 };

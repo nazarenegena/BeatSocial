@@ -1,7 +1,5 @@
-import Box from "@/components/Box";
 import City from "../../public/images/city.jpeg";
 import LyricSection from "@/components/sections/LyricsSection";
-import SocialsSection from "@/components/sections/SocialsSection";
 import TrackLineUpSection from "@/components/sections/TrackLineUpSection";
 
 export default function Page() {

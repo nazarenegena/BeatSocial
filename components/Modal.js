@@ -14,7 +14,7 @@ const SearchModal = ({ openModal, isOpen, children }) => {
           className="
   fixed
   inset-0
-  z-10
+  z-30
   flex
   cursor-pointer
   items-center

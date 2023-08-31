@@ -6,7 +6,7 @@ import Link from "next/link";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { TbBrandBeats } from "react-icons/tb";
-import SearchModal from "@/components/SearchModal";
+import SearchModal from "@/components/Modal";
 import Search from "../Search";
 
 const Navbar = ({ children }) => {
