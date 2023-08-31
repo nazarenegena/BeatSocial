@@ -1,3 +1,6 @@
+import Content from "@/components/sections/Content";
+import Header from "@/components/sections/Header";
+
 export default function Page() {
   return (
     <div
@@ -12,9 +15,7 @@ export default function Page() {
         px-4
     "
     >
-      <p className="mb-3 font-mono text-xl font-semibold text-secondary-orange">
-        Recently Played
-      </p>
+      <Header pageTitle="Recently Played" />
       <Content />
     </div>
   );

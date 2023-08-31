@@ -11,12 +11,10 @@ export default function Home() {
     overflow-hidden
     overflow-y-auto
     rounded-lg
-    
-    
         px-4
     "
     >
-      <Header />
+      <Header pageTitle="Welcome back" />
       <HomeContent />
     </div>
   );
