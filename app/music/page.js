@@ -10,13 +10,14 @@ export default function Page() {
     <div
       className="
     
-    mt-2
+    
     h-full
-    w-full
+    w-auto
+    justify-between
     overflow-hidden
     overflow-y-auto
-        rounded-lg
-        px-4
+        rounded-lg bg-gradient-to-r from-white to-orange-100
+        px-12
     "
     >
       <div className=" pb-8 pt-12 font-mono ">
@@ -26,9 +27,9 @@ export default function Page() {
       <div>
         <LyricSection lyricImg={City} />
       </div>
-
-      <SocialsSection />
-      <TrackLineUpSection />
+      <div>
+        <TrackLineUpSection />
+      </div>
     </div>
   );
 }
