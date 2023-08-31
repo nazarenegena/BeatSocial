@@ -13,12 +13,13 @@ const MiniCard = ({ title, artist, imgSrc }) => {
         flex
         cursor-pointer
         flex-col
-         items-center
-       justify-center
-        shadow-md  
-            hover:font-medium
+        items-center
+         justify-center
+       shadow-md
+        hover:font-medium  
             hover:text-secondary-orange
             hover:opacity-90
+            hover:shadow-xl
         
         "
       >

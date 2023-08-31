@@ -12,7 +12,8 @@ export default function Page() {
     overflow-hidden
     overflow-y-auto
         rounded-lg
-        px-4
+        bg-gradient-to-r
+        from-white to-orange-100 px-4
     "
     >
       <Header pageTitle="Albums" />

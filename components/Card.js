@@ -17,13 +17,14 @@ const Card = ({ title, artist, imgSrc }) => {
         cursor-pointer
         flex-col
         items-center
-         justify-center
-       pt-2
-        shadow-md  
-            hover:font-medium
+        justify-center
+         pt-2
+       shadow-md
+        hover:font-medium  
             hover:text-secondary-orange
-        
             hover:opacity-90
+        
+            hover:shadow-xl
         
         "
       >
