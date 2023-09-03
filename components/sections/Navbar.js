@@ -8,14 +8,12 @@ import { BiSearch } from "react-icons/bi";
 import { TbBrandBeats } from "react-icons/tb";
 import SearchModal from "@/components/Modal";
 import Search from "../Search";
-import PlayMusic from "../PlayMusic";
-import earphone from "../../public/images/earphone.jpeg";
 
 const Navbar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className=" relative flex h-full">
+    <div className="flex h-full">
       <div
         className="hidden
             h-full
@@ -43,7 +41,7 @@ const Navbar = ({ children }) => {
               hover:shadow-md
               
             "
-            href="/"
+            href="/dashboard"
           >
             <HiHome className="mr-4 " size={16} />
             <p>Home</p>
@@ -76,15 +74,12 @@ const Navbar = ({ children }) => {
           <Library />
         </Box>
       </div>
-      <main className=" h-full flex-1 overflow-y-auto py-2">
+      <main className="h-full flex-1 overflow-y-auto py-2">
         {children}
         <SearchModal openModal={() => setIsOpen(!isOpen)} isOpen={isOpen}>
           <Search />
         </SearchModal>
       </main>
-      <div className="max-w-1/2 absolute bottom-0 flex h-20 w-full overflow-x-hidden  border-y-2 border-gray-100 bg-white shadow-2xl">
-        <PlayMusic artist="Hollow Cloves" song="Memories" imgSrc={earphone} />
-      </div>
       {/* bg-gradient-to-t from-white to-rose-100 justify-between */}
     </div>
   );

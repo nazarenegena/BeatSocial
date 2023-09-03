@@ -18,6 +18,7 @@ module.exports = {
         "dark-pink": "#9F6A52",
         "primary-green": "#4A6443",
         "secondary-orange": "#EC7434",
+        "dull-brown": "#BF9F88",
       },
     },
   },
