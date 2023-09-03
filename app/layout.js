@@ -13,7 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar>{children}</Navbar>
+        {/* <Navbar>
+        {children}
+        </Navbar> */}
+        {children}
       </body>
     </html>
   );

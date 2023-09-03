@@ -20,14 +20,18 @@ const PlayMusic = ({ imgSrc, artist, song }) => {
           </p>
         </div>
       </div>
-      <div className="mx-8 pt-2">
+      <div className="mx-8 cursor-pointer pt-2">
         <p className="">play pause</p>
       </div>
       <div
         className="mx-4 cursor-pointer pt-2"
         onClick={() => setIsLiked(!isLiked)}
       >
-        {isLiked ? <BiHeart size={24} /> : <HiHeart fill="#EC7434" size={24} />}
+        {!isLiked ? (
+          <BiHeart size={24} fill="#EC7434" />
+        ) : (
+          <HiHeart fill="#EC7434" size={24} />
+        )}
       </div>
     </div>
   );
