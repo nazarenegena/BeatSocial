@@ -9,7 +9,7 @@ import mic from "../../public/images/mic.jpeg";
 
 const HomeContent = () => {
   return (
-    <div className=" ">
+    <div className="px-10">
       {/* playlist */}
       <p className="mb-3 font-mono text-xl font-semibold text-secondary-orange">
         Playlist
