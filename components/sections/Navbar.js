@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { usePathname } from "next/navigation";
 import Box from "../Box";
 import Library from "../Library";
 import Link from "next/link";
@@ -10,10 +11,11 @@ import SearchModal from "@/components/Modal";
 import Search from "../Search";
 
 const Navbar = ({ children }) => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex h-full">
+    <div className="flex h-full ">
       <div
         className="hidden
             h-full
@@ -24,32 +26,29 @@ const Navbar = ({ children }) => {
             p-2 md:flex"
       >
         <Box className="px-5 py-5">
-          <div className="flex cursor-pointer items-center font-semibold text-secondary-orange">
+          <Link
+            className="flex cursor-pointer items-center font-semibold text-secondary-orange"
+            href="/"
+          >
             <TbBrandBeats size={50} strokeWidth={2} />
             <p>beatsocial</p>
-          </div>
+          </Link>
           <Link
-            className="my-6
-              flex
-               cursor-pointer
-                 items-center
-              pl-2
-              transition
-              hover:rounded-md
-              hover:font-medium
-              hover:text-secondary-orange
-              hover:shadow-md
-              
-            "
             href="/dashboard"
+            className={`my-10 flex cursor-pointer items-center pl-2 transition hover:rounded-md hover:font-medium hover:text-secondary-orange hover:shadow-md ${
+              pathname === "/dashboard"
+                ? "active text-secondary-orange"
+                : "text-black"
+            }`}
           >
-            <HiHome className="mr-4 " size={16} />
+            <HiHome className="mr-4" size={16} />
             <p>Home</p>
           </Link>
 
           <button
             className="
-          hover:
+            hover:
+          mb-8
               flex
                w-60
                  cursor-pointer

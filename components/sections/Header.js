@@ -12,17 +12,17 @@ const Header = ({ pageTitle }) => {
   return (
     <div
       className="
-        my-6
+       
         mr-12
+       
         flex
         h-fit
-        justify-between
-       
-       
+       justify-between bg-gradient-to-r from-white
+       to-orange-100 py-5 pl-8 
         "
     >
       <div>
-        <p className="mb-5 font-mono text-4xl font-semibold text-secondary-orange ">
+        <p className="mb-5 ml-3 text-3xl font-semibold text-black ">
           {pageTitle}
         </p>
       </div>

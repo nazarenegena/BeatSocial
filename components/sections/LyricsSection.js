@@ -24,7 +24,7 @@ const LyricSection = ({ lyricImg }) => {
         </div>
       </div>
 
-      <div lassName="absolute inset-0">
+      <div className="absolute inset-0">
         <Image
           src={lyricImg}
           alt="background image"
