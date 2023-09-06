@@ -3,11 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BiPlayCircle } from "react-icons/bi";
-const Card = ({ title, artist, imgSrc }) => {
+import { useDispatch } from "react-redux";
+import { playSong } from "@/redux/features/songsSlice";
+const Card = ({ title, artist, imgSrc, track, tracks, index }) => {
+  const dispatch = useDispatch();
+  console.log(tracks, "tracks");
   return (
-    <Link href="/music">
-      <div
-        className="
+    // <Link href="/music">
+    <div
+      className="
       
         hover:scale-115
         group
@@ -27,9 +31,10 @@ const Card = ({ title, artist, imgSrc }) => {
             hover:shadow-xl
         
         "
-      >
-        <div
-          className="
+    >
+      <div
+        onClick={() => dispatch(playSong({ index, tracks }))}
+        className="
             bg-red
             absolute
             flex
@@ -43,12 +48,12 @@ const Card = ({ title, artist, imgSrc }) => {
             group-hover:opacity-100
            
             "
-        >
-          <BiPlayCircle size={70} />
-        </div>
+      >
+        <BiPlayCircle size={70} />
+      </div>
 
-        <Image
-          className=" 
+      <Image
+        className=" 
             h-72 
             w-60
             items-center 
@@ -57,17 +62,17 @@ const Card = ({ title, artist, imgSrc }) => {
             
             
             "
-          src={imgSrc}
-          width={200}
-          height={200}
-          alt="music pic"
-        />
-        <div className="my-2">
-          <p className="font-mono font-semibold">{title}</p>
-          <p className="font-serif font-medium">{artist}</p>
-        </div>
+        src={imgSrc}
+        width={200}
+        height={200}
+        alt="music pic"
+      />
+      <div className="my-2">
+        <p className="font-mono font-semibold">{title}</p>
+        <p className="font-serif font-medium">{artist}</p>
       </div>
-    </Link>
+    </div>
+    // </Link>
   );
 };
 
