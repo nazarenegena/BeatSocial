@@ -1,4 +1,3 @@
-import Navbar from "@/components/sections/Navbar";
 import "./globals.css";
 import { Figtree } from "next/font/google";
 
@@ -12,12 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={font.className}>
-        {/* <Navbar>
-        {children}
-        </Navbar> */}
-        {children}
-      </body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Image from "next/image";
 import floatBg from "../../public/images/floatHeadPhones.jpeg";
@@ -10,38 +9,37 @@ import { BsLinkedin } from "react-icons/bs";
 
 import Button from "../Button";
 import { TbBrandBeats } from "react-icons/tb";
-import Navbar from "./Navbar";
 
 const LandingPage = () => {
   return (
-    <div className="h-full w-full ">
+    <div className="h-full w-full">
       <div>
-        <div className="sticky top-0 z-40 flex justify-between bg-white px-8 py-4 font-mono shadow-lg">
+        <div className="sticky top-0 z-40 flex justify-between bg-white px-8 py-4 font-mono shadow-lg  ">
           {/* Navbar section */}
-          <div className="flex items-center font-semibold text-secondary-orange">
+          <div className="flex items-center font-semibold text-secondary-orange ">
             <TbBrandBeats size={50} strokeWidth={2} />
             <p>beatsocial</p>
           </div>
 
-          <div className="ml-40 flex items-center font-mono">
+          <div className=" ml-40 flex items-center font-mono">
             <p className="mx-10 cursor-pointer border-secondary-orange p-2 transition hover:border-b hover:font-medium hover:text-secondary-orange">
-              About
+              <a href="#about">About</a>
             </p>
-            <p className=" cursor-pointer border-secondary-orange p-2 transition hover:border-b hover:font-medium hover:text-secondary-orange">
-              Features
+            <p className=" cursor-pointer border-secondary-orange p-2 transition hover:border-b hover:font-medium hover:text-secondary-orange ">
+              <a href="#features">Features</a>
             </p>
           </div>
 
           <div>
             <Button
               className={
-                " text-bold w-30 mr-10 rounded-md border-2 border-black px-8 py-2 font-medium text-black transition hover:border-secondary-orange hover:bg-secondary-orange hover:text-white"
+                " text-bold w-30 mr-10 rounded-md border-2 border-black px-8 py-2 font-medium text-black transition hover:border-secondary-orange hover:bg-secondary-orange hover:text-white "
               }
               title={"sign in"}
             />
             <Button
               className={
-                " w-30 mr-8 rounded-md border-2 border-black bg-black px-8 py-2 font-medium text-white transition hover:border-secondary-orange hover:bg-secondary-orange hover:text-white"
+                " w-30 mr-8 rounded-md border-2 border-black bg-black px-8 py-2 font-medium text-white transition hover:border-secondary-orange hover:bg-secondary-orange hover:text-white "
               }
               title={"sign Up"}
             />
@@ -49,13 +47,13 @@ const LandingPage = () => {
         </div>
 
         {/* content section */}
-        <div className=" h-full">
+        <div className=" h-full w-full">
           {/* hero section */}
           <div className="absolute left-[42rem] top-80 z-20">
-            <p className="font-mono text-7xl font-bold text-white shadow-black drop-shadow-2xl">
+            <p className="font-mono text-7xl font-bold text-white shadow-black drop-shadow-2xl ">
               Feel The Beat
             </p>
-            <p className="pt-6 font-mono text-xl font-semibold shadow-black drop-shadow-2xl">
+            <p className="pt-6 font-mono text-xl font-semibold shadow-black drop-shadow-2xl ">
               music for you ...
             </p>
           </div>
@@ -66,9 +64,10 @@ const LandingPage = () => {
             />
           </div>
 
-          {/* features section */}
           <div className="relative z-10 h-[38rem]  bg-secondary-orange opacity-20 "></div>
-          <div className="h-auto bg-white pb-24 pt-12">
+
+          {/* features section */}
+          <div className="h-auto bg-white pb-24 pt-12" id="features">
             <div className=" mx-40  mb-32 mt-10 flex items-center">
               <Image
                 src={playSection}
@@ -133,7 +132,7 @@ const LandingPage = () => {
 
           {/* About section */}
 
-          <div className="mb-32">
+          <div className="mb-32" id="about">
             <div className=" flex h-full ">
               <div className="mx-32 rounded-md bg-gradient-to-t from-white to-orange-200 p-7 shadow-lg">
                 <p className="py-10 text-xl font-medium">Our Inspiration</p>
