@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Box from "../Box";
+import earphone from "../../public/images/earphone.jpeg";
 import Library from "../Library";
 import Link from "next/link";
 import { HiHome } from "react-icons/hi";
@@ -9,6 +10,7 @@ import { BiSearch } from "react-icons/bi";
 import { TbBrandBeats } from "react-icons/tb";
 import SearchModal from "@/components/Modal";
 import Search from "../Search";
+import PlayMusic from "../PlayMusic";
 
 const Navbar = ({ children }) => {
   const pathname = usePathname();
@@ -79,6 +81,14 @@ const Navbar = ({ children }) => {
           <Search />
         </SearchModal>
       </main>
+      <div className="absolute bottom-0 h-20 w-[120rem] border border-neutral-100 bg-white drop-shadow-lg">
+        {/* <PlayMusic
+          imgSrc={earphone}
+          playingArtist={"Hollow Cloves"}
+          playingSong={"These Memories"}
+        /> */}
+        <PlayMusic />
+      </div>
       {/* bg-gradient-to-t from-white to-rose-100 justify-between */}
     </div>
   );
