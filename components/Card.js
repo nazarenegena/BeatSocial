@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { playSong } from "@/redux/features/songsSlice";
 const Card = ({ title, artist, imgSrc, track, tracks, index }) => {
   const dispatch = useDispatch();
-  console.log(tracks, "tracks");
+  // console.log(tracks, "tracks");
   return (
     // <Link href="/music">
     <div
