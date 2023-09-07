@@ -11,10 +11,13 @@ import { TbBrandBeats } from "react-icons/tb";
 import SearchModal from "@/components/Modal";
 import Search from "../Search";
 import PlayMusic from "../PlayMusic";
+import { useSelector } from "react-redux";
+import { selectCurrentSong } from "@/redux/features/songsSlice";
 
 const Navbar = ({ children }) => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const currentSong = useSelector(selectCurrentSong);
 
   return (
     <div className="flex h-full ">
@@ -81,14 +84,11 @@ const Navbar = ({ children }) => {
           <Search />
         </SearchModal>
       </main>
-      <div className="absolute bottom-0 h-24 w-[120rem] rounded-full border border-neutral-100 bg-white drop-shadow-lg">
-        {/* <PlayMusic
-          imgSrc={earphone}
-          playingArtist={"Hollow Cloves"}
-          playingSong={"These Memories"}
-        /> */}
-        <PlayMusic />
-      </div>
+      {currentSong?.id ? (
+        <div className="absolute bottom-0 h-24 w-[120rem] rounded-full border border-neutral-100 bg-white drop-shadow-lg">
+          <PlayMusic />
+        </div>
+      ) : null}
       {/* bg-gradient-to-t from-white to-rose-100 justify-between */}
     </div>
   );

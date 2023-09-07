@@ -3,9 +3,8 @@ import Image from "next/image";
 import { BiPlayCircle } from "react-icons/bi";
 const MiniCard = ({ title, artist, imgSrc }) => {
   return (
-    <Link href="/music">
-      <div
-        className="
+    <div
+      className="
         hover:scale-115
         group
         relative
@@ -22,9 +21,9 @@ const MiniCard = ({ title, artist, imgSrc }) => {
             hover:shadow-xl
         
         "
-      >
-        <div
-          className="
+    >
+      <div
+        className="
             absolute
             flex
             w-full
@@ -36,12 +35,12 @@ const MiniCard = ({ title, artist, imgSrc }) => {
             transition
            group-hover:opacity-100
             "
-        >
-          <BiPlayCircle size={70} />
-        </div>
+      >
+        <BiPlayCircle size={70} />
+      </div>
 
-        <Image
-          className=" 
+      <Image
+        className=" 
         h-48
             w-full
             items-center 
@@ -50,17 +49,16 @@ const MiniCard = ({ title, artist, imgSrc }) => {
             
             
             "
-          src={imgSrc}
-          width={200}
-          height={200}
-          alt="music pic"
-        />
-        <div className="my-2">
-          <p className="font-mono font-semibold">{title}</p>
-          <p className="font-serif font-medium">{artist}</p>
-        </div>
+        src={imgSrc}
+        width={200}
+        height={200}
+        alt="music pic"
+      />
+      <div className="my-2">
+        <p className="font-mono font-semibold">{title}</p>
+        <p className="font-serif font-medium">{artist}</p>
       </div>
-    </Link>
+    </div>
   );
 };
 
