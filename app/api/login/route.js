@@ -1,5 +1,5 @@
 // import prisma client
-import prisma from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 export default async function POST(req, res) {
   if (req.method === "POST") {
     //login user
