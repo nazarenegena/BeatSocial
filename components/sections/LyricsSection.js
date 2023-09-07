@@ -27,7 +27,7 @@ const LyricSection = ({ lyricImg }) => {
       <div className="absolute inset-0">
         <Image
           src={lyricImg}
-          alt="background image"
+          alt="background"
           fill
           className="h-96 max-w-full rounded-lg"
         />
