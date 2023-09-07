@@ -6,7 +6,7 @@ const Search = () => {
     const [value, setValue] = useState("What do you want to listen to ?")
   const searchHandler = (event) => {
      setValue(event.target.value);
-     console.log(value)
+    //  console.log(value)
   };
   return (
     <div className="relative w-full rounded-full text-gray-600 shadow-lg hover:text-secondary-orange font-bold">

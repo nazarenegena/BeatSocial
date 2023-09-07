@@ -1,6 +1,6 @@
-import Navbar from "@/components/sections/Navbar";
 import "./globals.css";
 import { Figtree } from "next/font/google";
+import ReduxProvider from "@/redux/ReduxProvider";
 
 const font = Figtree({ subsets: ["latin"] });
 
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={font.className}>
-        <Navbar>{children}</Navbar>
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

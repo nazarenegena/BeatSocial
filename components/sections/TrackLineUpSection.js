@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BiPlay } from "react-icons/bi";
 import { BiHeart } from "react-icons/bi";
 import { HiHeart } from "react-icons/hi";
-import SearchModal from "../Modal";
+import earphone from "../../public/images/earphone.jpeg";
 import PlayMusic from "../PlayMusic";
 import Box from "../Box";
 
@@ -96,9 +96,6 @@ const TrackLineUpSection = () => {
           })}
         </tbody>
       </table>
-      {/* <div className="absolute bottom-2 mr-80 flex h-20 w-2/5  items-center justify-center rounded-full bg-secondary-orange opacity-90 shadow-md">
-        <PlayMusic />
-      </div> */}
     </>
   );
 };
