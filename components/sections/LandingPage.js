@@ -60,6 +60,7 @@ const LandingPage = () => {
           <div className="absolute inset-0 shadow-inner">
             <Image
               src={floatBg}
+              alt="beatsocial_app"
               className=" h-[43rem] max-w-full object-cover "
             />
           </div>
@@ -71,6 +72,7 @@ const LandingPage = () => {
             <div className=" mx-40  mb-32 mt-10 flex items-center">
               <Image
                 src={playSection}
+                alt="beatsocial_app"
                 className="mx-12 h-96 w-1/2 rounded-lg object-contain shadow-2xl"
               />
               <div className="ml-48">
@@ -100,6 +102,7 @@ const LandingPage = () => {
               </div>
               <Image
                 src={dashboardSection}
+                alt="beatsocial_app"
                 className="ml-56 h-96 w-1/2 rounded-lg object-contain shadow-2xl"
               />
             </div>
@@ -107,6 +110,7 @@ const LandingPage = () => {
             <div className=" mx-40  mb-32 mt-32 flex items-center rounded-lg">
               <Image
                 src={browseSection}
+                alt="beatsocial_app"
                 className="mx-12 h-96 w-1/2 rounded-lg object-contain shadow-2xl"
               />
               <div className="ml-48">
