@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 // We impot our prisma client
-import prisma from "../lib/prisma";
+import prisma from "@/lib/prisma";
 // Prisma will help handle and catch errors
 import { Prisma } from "@prisma/client";
 

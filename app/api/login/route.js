@@ -1,9 +1,8 @@
 // import prisma client
-import prisma from "./lib/prisma";
-import hashPassword from "./create";
+import prisma from "@/lib/prisma";
 export default async function POST(req, res) {
   if (req.method === "POST") {
-    //login uer
+    //login user
     await loginUserHandler(req, res);
   } else {
     return res.status(405);
