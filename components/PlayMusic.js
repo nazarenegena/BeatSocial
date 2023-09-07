@@ -41,8 +41,10 @@ const PlayMusic = () => {
       <div className=" flex items-center justify-evenly">
         <Image
           className="h-12 w-12 items-center rounded-md object-cover shadow-md"
-          src={album}
+          src={album?.cover_big}
           alt="pic"
+          width={50}
+          height={50}
         />
         <div className="mx-4 pt-2">
           <p className="font-mono text-sm font-bold">{title}</p>

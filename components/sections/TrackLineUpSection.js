@@ -1,45 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import { BiPlay } from "react-icons/bi";
+import { BiPlay, BiPause } from "react-icons/bi";
 import { BiHeart } from "react-icons/bi";
 import { HiHeart } from "react-icons/hi";
 import earphone from "../../public/images/earphone.jpeg";
 import PlayMusic from "../PlayMusic";
 import Box from "../Box";
+import { useDispatch, useSelector } from "react-redux";
+import { playSong, selectCurrentSong } from "@/redux/features/songsSlice";
+import { formatDuration } from "@/utils/formatters";
 
-const tracks = [
-  { title: "Rain", artist: "Rihanna", id: 1, duration: "2.43", liked: false },
-  {
-    title: "Numb",
-    artist: "Linkin Park",
-    id: 2,
-    duration: "1.36",
-    liked: false,
-  },
-  { title: "Summer", artist: "Adele", id: 3, duration: "4.43", liked: false },
-  { title: "Sugar", artist: "Maroon 5", id: 4, duration: "3.43", liked: false },
-  {
-    title: "Uptown",
-    artist: "Bruno Mars",
-    id: 5,
-    duration: "1.43",
-    liked: false,
-  },
-  { title: "Peace", artist: "Rachel", id: 6, duration: "2.43", liked: false },
-  { title: "NewYork", artist: "Jay Z", id: 7, duration: "2.43", liked: false },
-  {
-    title: "Single Ladies",
-    artist: "Beyonce",
-    id: 8,
-    duration: "2.43",
-    liked: false,
-  },
-  { title: "Home", artist: "Allyah", id: 9, duration: "2.43", liked: false },
-  { title: "Lost", artist: "Lisa", id: 10, duration: "2.43", liked: false },
-];
-
-const TrackLineUpSection = () => {
+const TrackLineUpSection = ({ tracks }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const currentSong = useSelector(selectCurrentSong);
 
   const [likedTracks, setLikedTracks] = useState(tracks.map(() => false));
   const handleLikeClick = (index) => {
@@ -47,7 +23,6 @@ const TrackLineUpSection = () => {
     newLikedTracks[index] = !newLikedTracks[index];
     setLikedTracks(newLikedTracks);
   };
-
   return (
     <>
       <table className="relative h-full w-full table-fixed overflow-hidden py-12 font-mono">
@@ -57,27 +32,37 @@ const TrackLineUpSection = () => {
               <>
                 <tr
                   key={track.id}
-                  className="my-10 flex cursor-pointer items-center border-x  border-neutral-200 from-white to-orange-200 px-12 shadow-md hover:rounded-sm hover:bg-gradient-to-l hover:shadow-lg hover:transition"
+                  className={`my-10 flex cursor-pointer items-center border-x  border-neutral-200 from-white to-orange-200 px-12 shadow-md hover:rounded-sm hover:bg-gradient-to-l hover:shadow-lg hover:transition ${
+                    currentSong?.id === track?.id ? "bg-gradient-to-l" : ""
+                  } `}
                 >
                   <td
                     className="group w-1/4 py-5"
-                    onClick={() => setIsOpen(!isOpen)}
+                    onClick={() => dispatch(playSong({ index, tracks }))}
                   >
-                    <BiPlay
-                      size={28}
-                      className="group-hover:fill-secondary-orange"
-                      stroke="currentColor"
-                    />
+                    {currentSong?.id === track?.id ? (
+                      <BiPause
+                        size={28}
+                        className="fill-secondary-orange"
+                        stroke="currentColor"
+                      />
+                    ) : (
+                      <BiPlay
+                        size={28}
+                        className="group-hover:fill-secondary-orange"
+                        stroke="currentColor"
+                      />
+                    )}
                   </td>
 
                   <td className="w-1/4 py-5 font-semibold text-neutral-700">
-                    {track.artist}
+                    {track.artist?.name}
                   </td>
                   <td className="w-1/4 py-5 font-semibold text-neutral-700">
                     {track.title}
                   </td>
                   <td className="w-1/4 py-5 font-semibold text-neutral-500 ">
-                    {track.duration}
+                    {formatDuration(track.duration)}
                   </td>
                   <td
                     className="w-1/4 py-5"

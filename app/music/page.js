@@ -1,5 +1,5 @@
 import City from "../../public/images/city.jpeg";
-import LyricSection from "@/components/sections/LyricsSection";
+import LyricSection from "@/components/LyricsSection";
 import Navbar from "@/components/sections/Navbar";
 import TrackLineUpSection from "@/components/sections/TrackLineUpSection";
 

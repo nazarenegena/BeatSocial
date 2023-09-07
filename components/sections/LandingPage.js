@@ -27,7 +27,15 @@ const LandingPage = () => {
             </p>
             <p className=" cursor-pointer border-secondary-orange p-2 transition hover:border-b hover:font-medium hover:text-secondary-orange ">
               <a href="#features">Features</a>
-            </p>
+            </p>{" "}
+            <Link
+              href={"https://github.com/nazarenegena/BeatSocial"}
+              target="_blank"
+            >
+              <p className=" mx-10 cursor-pointer border-secondary-orange p-2 transition hover:border-b hover:font-medium hover:text-secondary-orange ">
+                Repository
+              </p>
+            </Link>
           </div>
 
           <div>
@@ -186,27 +194,47 @@ const LandingPage = () => {
               <div className="mx-10 flex items-center px-40 py-6 shadow-md">
                 <p className="font-semibold">Nazarene Wanyaga</p>
                 <div className="mx-10">
-                  <p className="my-5 flex cursor-pointer items-center font-semibold text-secondary-orange">
-                    <BsGithub className="mx-3" size={20} fill="#EC7434" />
-                    Github
-                  </p>
-                  <p className="flex cursor-pointer items-center font-semibold text-secondary-orange">
-                    <BsLinkedin className="mx-3" size={20} fill="#EC7434" />
-                    Linked in
-                  </p>
+                  <Link
+                    href={"https://github.com/nazarenegena"}
+                    target="_blank"
+                  >
+                    <p className="my-5 flex cursor-pointer items-center font-semibold text-secondary-orange">
+                      <BsGithub className="mx-3" size={20} fill="#EC7434" />
+                      Github
+                    </p>
+                  </Link>
+
+                  <Link
+                    href={
+                      "https://www.linkedin.com/in/nazarene-wanyaga-426058180/"
+                    }
+                    target="_blank"
+                  >
+                    <p className="flex cursor-pointer items-center font-semibold text-secondary-orange">
+                      <BsLinkedin className="mx-3" size={20} fill="#EC7434" />
+                      Linked in
+                    </p>
+                  </Link>
                 </div>
               </div>
               <div className="mx-10 flex items-center px-40 py-6 shadow-md">
                 <p className="font-semibold">Joe Wainaina</p>
                 <div className="mx-10">
-                  <p className="my-5 flex cursor-pointer items-center font-semibold text-secondary-orange">
-                    <BsGithub className="mx-3" size={20} fill="#EC7434" />
-                    Github
-                  </p>
-                  <p className="flex cursor-pointer items-center font-semibold text-secondary-orange">
-                    <BsLinkedin className="mx-3" size={20} fill="#EC7434" />
-                    Linked in
-                  </p>
+                  <Link href={"https://github.com/iamjoee"} target="_blank">
+                    <p className="my-5 flex cursor-pointer items-center font-semibold text-secondary-orange">
+                      <BsGithub className="mx-3" size={20} fill="#EC7434" />
+                      Github
+                    </p>
+                  </Link>
+                  <Link
+                    href={"https://www.linkedin.com/in/joe-dev-ops"}
+                    target="_blank"
+                  >
+                    <p className="flex cursor-pointer items-center font-semibold text-secondary-orange">
+                      <BsLinkedin className="mx-3" size={20} fill="#EC7434" />
+                      Linked in
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
