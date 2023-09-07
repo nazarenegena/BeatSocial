@@ -141,7 +141,7 @@ const Library = () => {
               </Link>
 
               {/* top albums */}
-              <Link
+              {/* <Link
                 href="/top-album"
                 className={`my-10 flex cursor-pointer items-center pl-2 transition hover:rounded-md hover:font-medium hover:text-secondary-orange hover:shadow-md ${
                   pathname === "/top-album"
@@ -151,7 +151,7 @@ const Library = () => {
               >
                 <IoMdAlbums className="mr-4" size={16} />
                 <li>Top Albums</li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
         </div>

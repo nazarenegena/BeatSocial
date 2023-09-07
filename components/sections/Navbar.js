@@ -81,7 +81,7 @@ const Navbar = ({ children }) => {
           <Search />
         </SearchModal>
       </main>
-      <div className="absolute bottom-0 h-20 w-[120rem] border border-neutral-100 bg-white drop-shadow-lg">
+      <div className="absolute bottom-0 h-24 w-[120rem] rounded-full border border-neutral-100 bg-white drop-shadow-lg">
         {/* <PlayMusic
           imgSrc={earphone}
           playingArtist={"Hollow Cloves"}

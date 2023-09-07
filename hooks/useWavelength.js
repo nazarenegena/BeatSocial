@@ -3,18 +3,15 @@ import { useEffect, useRef, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 
 const options = {
-  //   progressColor: "#EC7434",
-  //   waveColor: "black",
-  //   fillParent: true,
-  //   responsive: true,
-  //   autoplay: true,
-  //   cursorWidth: 0,
-  //   barHeight: 0.5,
-  //   barGap: 3,
-
   container: "#waveform",
-  waveColor: "red",
-  progressColor: "blue",
+  progressColor: "#EC7434",
+  waveColor: "#BF9F88",
+  fillParent: true,
+  responsive: true,
+  autoplay: true,
+  cursorWidth: 3,
+  barHeight: 0.5,
+  barGap: 3,
 };
 
 const useWavesurfer = (waveContainerRef, audioSrc, onFinish) => {

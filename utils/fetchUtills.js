@@ -39,7 +39,7 @@ export async function fetchTopArtists({ limit = 3 } = {}) {
 
   const { data } = await fetchData(endpoint);
 
-  console.log(data);
+  // console.log(data);
 
   //   const promises = data.map((artist) => fetchArtist(artist.id));
   //   const topArtists = await Promise.all(promises);
