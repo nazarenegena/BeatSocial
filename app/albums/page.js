@@ -18,6 +18,7 @@ export default async function Page() {
               title={album?.title}
               imgSrc={album?.cover_big}
               artist={album?.artist?.name}
+              KEY={album.id}
             />
           ))}
         </div>
