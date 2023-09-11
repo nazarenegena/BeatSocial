@@ -3,9 +3,7 @@
 import MiniCard from "@/components/MiniCard";
 import disco from "../../public/images/disc.jpeg";
 import earphone from "../../public/images/earphone.jpeg";
-import artist from "../../public/images/artist.jpeg";
-import guitar from "../../public/images/guitar_bg.jpeg";
-import mic from "../../public/images/mic.jpeg";
+
 import {
   fetchTopArtists,
   fetchTopPlaylists,

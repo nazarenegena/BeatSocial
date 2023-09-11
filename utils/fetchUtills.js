@@ -64,3 +64,14 @@ export async function fetchTopArtists({ limit = 3 } = {}) {
 
   return data;
 }
+
+export async function fetchSearchData(query, { limit = 5 } = {}) {
+  const endpoint = (category) =>
+    `/search/${category}?q=${query}&limit=${limit}`;
+
+  const tracksPromise = fetchData(endpoint("track"));
+  const albumsPromise = fetchData(endpoint("album"));
+  const artistsPromise = fetchData(endpoint("artist"));
+
+  return await Promise.all([tracksPromise, albumsPromise, artistsPromise]);
+}
