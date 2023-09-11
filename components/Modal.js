@@ -2,7 +2,7 @@
 
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
-const SearchModal = ({ openModal, isOpen, children }) => {
+const Modal = ({ openModal, isOpen, children }) => {
   const handleClose = (e) => {
     if (e.target.id === "wrapper") openModal();
   };
@@ -25,10 +25,7 @@ const SearchModal = ({ openModal, isOpen, children }) => {
   "
           onClick={handleClose}
         >
-          <div className="flex w-[600px] flex-col">
-            {/* <button className=" text-white" onClick={openModal}>
-              <IoMdCloseCircleOutline size={24} />
-            </button> */}
+          <div className="flex  flex-col">
             <div className="rounded  p-2">{children}</div>
           </div>
         </div>
@@ -37,4 +34,4 @@ const SearchModal = ({ openModal, isOpen, children }) => {
   );
 };
 
-export default SearchModal;
+export default Modal;
