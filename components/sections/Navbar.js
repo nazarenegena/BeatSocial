@@ -8,7 +8,7 @@ import Link from "next/link";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import { TbBrandBeats } from "react-icons/tb";
-import SearchModal from "@/components/Modal";
+import Modal from "@/components/Modal";
 import Search from "../Search";
 import PlayMusic from "../PlayMusic";
 import { useSelector } from "react-redux";
@@ -80,9 +80,9 @@ const Navbar = ({ children }) => {
       </div>
       <main className="h-full flex-1 overflow-y-auto py-2">
         {children}
-        <SearchModal openModal={() => setIsOpen(!isOpen)} isOpen={isOpen}>
+        <Modal openModal={() => setIsOpen(!isOpen)} isOpen={isOpen}>
           <Search />
-        </SearchModal>
+        </Modal>
       </main>
       {currentSong?.id ? (
         <div className="absolute bottom-0 h-24 w-[120rem] rounded-full border border-neutral-100 bg-white drop-shadow-lg">

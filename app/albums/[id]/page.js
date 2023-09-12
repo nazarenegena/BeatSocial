@@ -9,12 +9,7 @@ export default async function Page({ params }) {
     <div className="h-full w-full overflow-hidden overflow-y-auto rounded-lg bg-gradient-to-r from-white to-orange-100">
       <Navbar>
         <div>
-          <LyricSection
-            title={title}
-            label="Album"
-            lyricImg={cover_big}
-            tracks={tracks.data}
-          />
+          <LyricSection title={title} label="Album" tracks={tracks.data} />
         </div>
         <TrackLineUpSection tracks={tracks.data} />
       </Navbar>

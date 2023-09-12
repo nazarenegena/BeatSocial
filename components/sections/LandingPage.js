@@ -1,3 +1,5 @@
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import floatBg from "../../public/images/floatHeadPhones.jpeg";
@@ -9,8 +11,22 @@ import { BsLinkedin } from "react-icons/bs";
 
 import Button from "../Button";
 import { TbBrandBeats } from "react-icons/tb";
+import Modal from "../Modal";
+import SignIn from "../auth/SignIn";
+import SignUp from "../auth/SignUp";
 
 const LandingPage = () => {
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const handleSignUp = () => {
+    setIsSignUpOpen(!isSignUpOpen);
+  };
+
+  const handleLogin = () => {
+    setIsLoginOpen(!isLoginOpen);
+  };
+
   return (
     <div className="h-full w-full">
       <div>
@@ -44,12 +60,14 @@ const LandingPage = () => {
                 " text-bold w-30 mr-10 rounded-md border-2 border-black px-8 py-2 font-medium text-black transition hover:border-secondary-orange hover:bg-secondary-orange hover:text-white "
               }
               title={"sign in"}
+              onClick={handleLogin}
             />
             <Button
               className={
                 " w-30 mr-8 rounded-md border-2 border-black bg-black px-8 py-2 font-medium text-white transition hover:border-secondary-orange hover:bg-secondary-orange hover:text-white "
               }
               title={"sign Up"}
+              onClick={handleSignUp}
             />
           </div>
         </div>
@@ -239,11 +257,23 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div></div>
+          <div>
+            {/* the authentication modal */}
+            <Modal
+              openModal={() => setIsSignUpOpen(!isSignUpOpen)}
+              isOpen={isSignUpOpen}
+            >
+              <SignUp />
+            </Modal>
+            <Modal
+              openModal={() => setIsLoginOpen(!isLoginOpen)}
+              isOpen={isLoginOpen}
+            >
+              <SignIn />
+            </Modal>
+          </div>
         </div>
       </div>
-
-      {/* <Navbar/> */}
     </div>
   );
 };

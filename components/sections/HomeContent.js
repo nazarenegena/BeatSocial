@@ -1,15 +1,10 @@
-// "use client";
-
 import MiniCard from "@/components/MiniCard";
-import disco from "../../public/images/disc.jpeg";
-import earphone from "../../public/images/earphone.jpeg";
-import artist from "../../public/images/artist.jpeg";
-import guitar from "../../public/images/guitar_bg.jpeg";
-import mic from "../../public/images/mic.jpeg";
+
 import {
   fetchTopArtists,
   fetchTopPlaylists,
   fetchTopTracks,
+  fetchAlbums,
 } from "@/utils/fetchUtills";
 import Link from "next/link";
 
@@ -17,6 +12,7 @@ const HomeContent = async () => {
   const songs = await fetchTopTracks({ limit: 5 });
   const playlists = await fetchTopPlaylists({ limit: 5 });
   const artists = await fetchTopArtists({ limit: 5 });
+  const albums = await fetchAlbums({ limit: 5 });
   return (
     <div className="px-10">
       {/* playlist */}
@@ -78,13 +74,15 @@ const HomeContent = async () => {
         <p className="mb-3 font-mono text-xl font-semibold text-secondary-orange">
           Albums
         </p>
-
-        <div className="grid w-full grid-cols-5 gap-5">
-          <MiniCard title={"dancing"} artist={"Jay Z"} imgSrc={earphone} />
-          <MiniCard title={"love"} artist={"Tay Tay"} imgSrc={disco} />
-          <MiniCard title={"beats"} artist={"Ray"} imgSrc={earphone} />
-          <MiniCard title={"Homey"} artist={"Drake"} imgSrc={disco} />
-          <MiniCard title={"beats"} artist={"Ray"} imgSrc={earphone} />
+        <div className="grid grid-cols-5 gap-5 font-mono">
+          {albums?.map((album) => (
+            <MiniCard
+              key={album.id}
+              title={album.name}
+              album={album?.album?.name}
+              imgSrc={album?.cover_big}
+            />
+          ))}
         </div>
       </div>
     </div>
