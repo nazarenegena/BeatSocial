@@ -33,6 +33,9 @@ const MiniCard = ({ title, artist, imgSrc }) => {
             opacity-0
             drop-shadow-md
             transition
+              duration-500 
+              hover:scale-110
+            
            group-hover:opacity-100
             "
       >
@@ -41,11 +44,11 @@ const MiniCard = ({ title, artist, imgSrc }) => {
 
       <Image
         className=" 
-        h-48
+        h-56
             w-full
             items-center 
-            rounded-md
-             object-cover
+            rounded-lg
+             object-contain
             
             
             "

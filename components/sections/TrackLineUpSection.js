@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { BiHeart } from "react-icons/bi";
 import { HiHeart } from "react-icons/hi";
-import earphone from "../../public/images/earphone.jpeg";
-import PlayMusic from "../PlayMusic";
-import Box from "../Box";
 import { useDispatch, useSelector } from "react-redux";
 import { playSong, selectCurrentSong } from "@/redux/features/songsSlice";
 import { formatDuration } from "@/utils/formatters";
@@ -23,6 +20,7 @@ const TrackLineUpSection = ({ tracks }) => {
     newLikedTracks[index] = !newLikedTracks[index];
     setLikedTracks(newLikedTracks);
   };
+  console.log(currentSong);
   return (
     <>
       <table className="relative h-full w-full table-fixed overflow-hidden py-12 font-mono">
@@ -58,7 +56,7 @@ const TrackLineUpSection = ({ tracks }) => {
                   <td className="w-1/4 py-5 font-semibold text-neutral-700">
                     {track.artist?.name}
                   </td>
-                  <td className="w-1/4 py-5 font-semibold text-neutral-700">
+                  <td className="mx-16 w-1/4 py-5 font-semibold text-neutral-700 ">
                     {track.title}
                   </td>
                   <td className="w-1/4 py-5 font-semibold text-neutral-500 ">

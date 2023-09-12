@@ -1,15 +1,11 @@
 "use client";
-
 import Image from "next/image";
-import Link from "next/link";
 import { BiPlayCircle } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { playSong } from "@/redux/features/songsSlice";
-const Card = ({ title, artist, imgSrc, track, tracks, index }) => {
+const Card = ({ title, artist, imgSrc, hasPlayBtn, tracks, index }) => {
   const dispatch = useDispatch();
-  // console.log(tracks, "tracks");
   return (
-    // <Link href="/music">
     <div
       className="
       
@@ -32,9 +28,10 @@ const Card = ({ title, artist, imgSrc, track, tracks, index }) => {
         
         "
     >
-      <div
-        onClick={() => dispatch(playSong({ index, tracks }))}
-        className="
+      {hasPlayBtn ? (
+        <div
+          onClick={() => dispatch(playSong({ index, tracks }))}
+          className="
             bg-red
             absolute
             flex
@@ -45,20 +42,23 @@ const Card = ({ title, artist, imgSrc, track, tracks, index }) => {
             opacity-0
             drop-shadow-md
             transition
+              duration-500 
+              hover:scale-110
             group-hover:opacity-100
            
             "
-      >
-        <BiPlayCircle size={70} />
-      </div>
+        >
+          <BiPlayCircle size={70} />
+        </div>
+      ) : null}
 
       <Image
         className=" 
             h-72 
-            w-60
+            w-80
             items-center 
-            rounded-md
-             object-cover
+             rounded-md
+             object-contain
             
             
             "
@@ -72,7 +72,6 @@ const Card = ({ title, artist, imgSrc, track, tracks, index }) => {
         <p className="font-serif font-medium">{artist}</p>
       </div>
     </div>
-    // </Link>
   );
 };
 

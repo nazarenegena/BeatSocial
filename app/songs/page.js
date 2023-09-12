@@ -6,7 +6,6 @@ import { fetchTopTracks } from "@/utils/fetchUtills";
 
 export default async function Page() {
   const songs = await fetchTopTracks({ limit: 20 });
-  // console.log(songs);
   return (
     <div className="h-full w-full overflow-hidden overflow-y-auto rounded-lg bg-gradient-to-r from-white to-orange-100">
       <Navbar>
@@ -20,6 +19,7 @@ export default async function Page() {
               imgSrc={song?.album?.cover_big}
               tracks={songs}
               index={index}
+              hasPlayBtn={true}
             />
           ))}
         </div>

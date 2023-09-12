@@ -45,6 +45,7 @@ export const { playSong, playNextSong, playPreviousSong } = songsSlice.actions;
 export const selectCurrentSong = createSelector(
   (state) => state.songs,
   (songs) => {
+    console.log(songs);
     return songs.entities[songs.activeEntity] || {};
   },
 );

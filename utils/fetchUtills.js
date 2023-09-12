@@ -52,8 +52,6 @@ export async function fetchAlbum(id) {
   const endpoint = `/album/${id}`;
   const data = await fetchData(endpoint);
 
-  console.log(data, "abum data");
-
   return data;
 }
 

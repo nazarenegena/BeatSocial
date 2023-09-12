@@ -6,7 +6,7 @@ import { fetchAlbums } from "@/utils/fetchUtills";
 import Link from "next/link";
 
 export default async function Page() {
-  const albums = await fetchAlbums({ limit: 30 });
+  const albums = await fetchAlbums();
 
   return (
     <div className="h-full w-full overflow-hidden overflow-y-auto rounded-lg bg-gradient-to-r from-white to-orange-100">
